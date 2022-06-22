@@ -1,0 +1,163 @@
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray: #424551;
+    --color-storm: #787a80;
+    --color-dark: #1e212c;
+    --color-primary: #ff5a30;
+
+    //sisez
+    --grid-gap: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+.container {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.main-title {
+    margin: 0 0 24px 0;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-dark);
+
+    span {
+        color: var(--color-primary);
+    }
+    &--home {
+        color: var(--color-white);
+    }
+}
+
+.main-descr {
+    margin: 0;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-storm);
+    &--home {
+        margin-bottom: 60px;
+        color: var(--color-white);
+    }
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    margin-bottom: 25px;
+    color: var(--color-dark);
+    &--center {
+        text-align: center;
+    }
+}
+
+.descr {
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    margin-bottom: 60px;
+    color: var(--color-storm);
+    &--center {
+        text-align: center;
+    }
+}
+
+.section-offset {
+    padding-top: 120px;
+}
+
+.custom-checkbox {
+    &__input {
+        opacity: 0;
+        position: absolute;
+    }
+    &__text {
+        position: relative;
+        display: inline-block;
+        padding-left: 27px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-gray);
+    }
+    &__text::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: 0;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid var(--color-primary);
+        border-radius: 3px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    &__text::after {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/check.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 10px 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__input:checked + &__text::before {
+        background-color: var(--color-primary);
+    }
+  
+    &__input:checked + &__text::after {
+        opacity: 1;
+    }
+    &__input:focus + &__text {
+        outline: 3px solid var(--color-primary);
+    }
+}

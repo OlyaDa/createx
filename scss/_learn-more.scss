@@ -1,0 +1,13 @@
+.learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__subtitle {
+        margin: 0;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-dark);
+        margin-right: 40px;
+    }
+}
