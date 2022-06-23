@@ -6,14 +6,16 @@
         .logo {
             margin-right: 60px;
         }
-        // justify-content: space-between;
     }
     &--main {
         background-color: var(--color-white);
     }
-    // &__nav {
-    //     margin-left: -112px;
-    // }
+    &--secondary {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .nav {
