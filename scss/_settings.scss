@@ -140,6 +140,11 @@ a {
     padding-top: 120px;
 }
 
+.centered {
+    width: 100%;
+    text-align: center;
+}
+
 .custom-checkbox {
     &__input {
         opacity: 0;
@@ -189,4 +194,10 @@ a {
     &__input:focus + &__text {
         outline: 3px solid var(--color-primary);
     }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
 }

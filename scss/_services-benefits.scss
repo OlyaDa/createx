@@ -1,10 +1,21 @@
-.mission {
-    background-color: var(--color-white);
+.services-benefits {
+    padding-top: 80px;
+    background-color: var(--color-dark);
+    &__title {
+        color: var(--color-white);
+    }
+    &__btn {
+        width: 390px;
+        transform: translateY(13px);
+    }
+    &__centered {
+        margin-bottom: -13px;
+    }
     &__list {
         --mission-gap: 94px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 27px;
+        margin-bottom: 86px;
         gap: calc(var(--mission-gap) * 2);
     }
     &__item {
@@ -28,14 +39,14 @@
                 background-repeat: no-repeat;
             }
         }
-        &--quality {
-            background-image: url(../images/like.svg);
+        &--terms {
+            background-image: url(../images/contract.svg);
         }
-        &--safety {
-            background-image: url(../images/hand.svg);
+        &--workers {
+            background-image: url(../images/helmet.svg);
         }
-        &--comfort {
-            background-image: url(../images/slippers.svg);
+        &--control {
+            background-image: url(../images/camera.svg);
         }
     }
     &__subtitle {
@@ -43,7 +54,7 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        color: var(--color-dark);
+        color: var(--color-white);
         margin-bottom: 11px;
     }
     &__descr {
@@ -51,35 +62,6 @@
         font-size: 16px;
         line-height: 160%;
         text-align: center;
-        color: var(--color-storm);
-    }
-}
-
-.know-form {
-    position: relative;
-    top: 92px;
-    padding: 48px 60px;
-    background: var(--color-white);
-    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-        0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-    border-radius: 4px;
-    &__title {
-        margin: 0;
-        text-align: center;
-        margin-bottom: 33px;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 150%;
-        color: var(--color-dark);
-    }
-    &__content {
-        display: flex;
-        align-items: flex-end;
-    }
-    &__field {
-        margin-right: 24px;
-    }
-    &__btn {
-        padding: 11px 29px;
+        color: rgba(255, 255, 255, 0.6);
     }
 }

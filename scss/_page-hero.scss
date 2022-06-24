@@ -1,11 +1,10 @@
 .page-hero {
     padding-top: 153px;
-    padding-bottom: 180px;
+    padding-bottom: 80px;
+    min-height: 600px;
     background-color: var(--color-athens);
-    background-image: url(../images/page-hero-bg.png);
-    background-position: right top;
     background-repeat: no-repeat;
-    // background-size: cover;
+    background-position: right top; 
     &__title {
         margin: 0;
         font-weight: 700;
@@ -14,6 +13,7 @@
         letter-spacing: 1px;
         color: var(--color-dark);
         margin-bottom: 24px;
+        max-width: 600px;
     }
     &__descr {
         margin: 0;
@@ -24,6 +24,12 @@
     }
     &__breadcrumbs {
         margin-bottom: 40px;
+    }
+    &--services {
+        background-image: url(../images/page-hero-bg.png);
+    }
+    &--services-inner {
+        background-image: url(../images/page-hero-inner-bg.png);
     }
 }
 
