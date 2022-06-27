@@ -267,6 +267,10 @@ a {
   color: var(--color-gray);
 }
 
+.nav__link--current {
+  color: var(--color-primary);
+}
+
 .header-contacts {
   margin-left: auto;
   display: -webkit-box;
@@ -776,7 +780,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   z-index: 5;
 }
 
@@ -900,6 +903,15 @@ a {
   padding: 80px 0;
 }
 
+.partners--interior-design {
+  padding: 80px 0 115px 0;
+}
+
+.partners--work {
+  padding: 183px 0 115px 0;
+  background-color: var(--color-white);
+}
+
 .partners__title {
   margin-bottom: 61px;
 }
@@ -940,6 +952,8 @@ a {
 }
 
 .testimonials__image {
+  position: relative;
+  z-index: 5;
   margin-top: -2px;
   margin-bottom: -62px;
 }
@@ -1460,7 +1474,7 @@ a {
   min-height: 600px;
   background-color: var(--color-athens);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right 5px top;
 }
 
 .page-hero__title {
@@ -1492,6 +1506,10 @@ a {
 
 .page-hero--services-inner {
   background-image: url(../images/page-hero-inner-bg.png);
+}
+
+.page-hero--work {
+  background-image: url(../images/page-hero-work-bg.png);
 }
 
 .breadcrumbs {
@@ -1898,7 +1916,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   z-index: 5;
 }
 
@@ -2101,4 +2118,125 @@ a {
   line-height: 160%;
   text-align: center;
   color: var(--color-gray);
+}
+
+.portfolio {
+  position: relative;
+  padding-bottom: 98px;
+}
+
+.portfolio-tabs-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-59px);
+          transform: translateY(-59px);
+  margin-bottom: 60px;
+}
+
+.portfolio-tabs-nav__item {
+  width: calc((100% - (20px * 4)) / 5);
+}
+
+.portfolio-tabs-nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.portfolio-tabs-nav__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: var(--color-white);
+  -webkit-box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+          box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+  min-height: 154px;
+  padding: 15px;
+  color: var(--color-primary);
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.portfolio-tabs-nav__btn--active {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  pointer-events: none;
+}
+
+.portfolio-tabs-nav__btn--active .portfolio-tabs-nav__text {
+  color: var(--color-white);
+}
+
+.portfolio-tabs-nav__ikon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  fill: currentColor;
+  color: inherit;
+  margin-bottom: 14px;
+  pointer-events: none;
+}
+
+.portfolio-tabs-nav__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: #9a9ca5;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.portfolio-tabs__item {
+  display: none;
+  grid-column: 4 span;
+}
+
+.portfolio-tabs__item--visible {
+  display: block;
+}
+
+.portfolio-tabs__item--visible-more {
+  display: block !important;
+}
+
+.portfolio-more {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-gray);
+  margin-top: 62px;
+}
+
+.portfolio-more svg {
+  fill: currentColor;
+  color: inherit;
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 16px;
 }

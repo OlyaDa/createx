@@ -4,7 +4,7 @@
     min-height: 600px;
     background-color: var(--color-athens);
     background-repeat: no-repeat;
-    background-position: right top; 
+    background-position: right 5px top; 
     &__title {
         margin: 0;
         font-weight: 700;
@@ -30,6 +30,9 @@
     }
     &--services-inner {
         background-image: url(../images/page-hero-inner-bg.png);
+    }
+    &--work {
+        background-image: url(../images/page-hero-work-bg.png);
     }
 }
 

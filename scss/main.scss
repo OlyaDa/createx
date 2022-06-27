@@ -3,6 +3,8 @@
 // @include font-face ("Ubuntu", "UbuntuBold", 700, normal);
 // @include font-face ("Ubuntu", "LatoBold", 700, normal);
 // @include font-face ("Ubuntu", "LatoBlack", 900, normal);
+
+//index.html
 @import "_mixins";
 @import "_settings";
 @import "_header";
@@ -20,11 +22,16 @@
 @import "_contacts-section";
 @import "_footer";
 
+//services.html
 @import "_page-hero";
 @import "_services-content";
 
+//interior-design.html
 @import "_we-offer";
 @import "_how-we-do";
 @import "_services-benefits";
 @import "_related-projects";
 @import "_pricing";
+
+//work.html
+@import "_portfolio";
