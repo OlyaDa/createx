@@ -2,6 +2,9 @@
     padding: 120px 0;
     background-color: var(--color-white);
     &__image {
+        img {
+            border-radius: 4px;
+        }
         grid-column: 7 span;
     }
     &__content {

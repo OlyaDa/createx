@@ -29,3 +29,22 @@ const relatedprojectsSlider = new Swiper('.related-projects__items', {
         prevEl: '.related-projects__prev',
     },
 });
+
+const workImages = document.querySelector('.work-images-slider');
+
+const workSliderNav = new Swiper(".work-images-nav", {
+    spaceBetween: 20,
+    slidesPerView: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+const workSlider = new Swiper(workImages, {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".work-images__next",
+        prevEl: ".work-images__prev",
+    },
+    thumbs: {
+        swiper: workSliderNav,
+    },
+});

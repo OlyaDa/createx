@@ -1,6 +1,9 @@
 .related-projects {
     padding: 180px 0 99px 0;
     background-color: var(--color-white);
+    &--work-inner {
+        padding: 179px 0 120px 0;
+    }
     &__top {
         display: flex;
         align-items: flex-end;

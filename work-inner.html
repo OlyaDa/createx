@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/accordion.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
@@ -25,7 +26,7 @@
                 <nav class="nav header__nav">
                     <ul class="nav__list list-reset">
                         <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
-                        <li class="nav__item"><a class="nav__link nav__link--current">Services</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">News</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
@@ -46,105 +47,226 @@
 
         <!--.......................PAGE-HERO.......................-->
         <main>
-            <section class="page-hero page-hero--services">
+            <section class="page-hero page-hero--work-inner">
                 <div class="container">
                     <ul class="list-reset breadcrumbs page-hero__breadcrumbs">
                         <li class="breadcrumbs__item">
                             <a href="#" class="breadcrumbs__link">Homepage</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link">Services</a>
+                            <a href="#" class="breadcrumbs__link">Work</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link">Modern Cottage</a>
                         </li>
                     </ul>
-                    <h1 class="page-hero__title">SERVICES</h1>
-                    <p class="page-hero__descr">
-                        If&nbsp;you are looking for a&nbsp;<nobr>full-service</nobr>
-                        construction company, look to&nbsp;Createx Construction Bureau.
-                        We&nbsp;are doing our best to&nbsp;be&nbsp;a&nbsp;partner for all
-                        of&nbsp;your construction needs.
-                    </p>
+                    <h1 class="page-hero__title page-hero__title--mb page-hero__title--work-inner">Modern Cottage</h1>
+
+                    <!-- Swiper -->
+                    <div class="work-images">
+                        <div class="work-images-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/cottage1.jpg" alt="Work 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/cottage1.jpg" alt="Work 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/cottage1.jpg" alt="Work 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/cottage1.jpg" alt="Work 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/cottage1.jpg" alt="Work 5">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/cottage1.jpg" alt="Work 6">
+                                </div>
+                            </div>
+                            <button class="btn-reset slider-nav__btn work-images__prev slider-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.20711 17.2071C8.81658 17.5976 8.18342 17.5976 7.79289 17.2071L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929L7.79289 6.79289C8.18342 6.40237 8.81658 6.40237 9.20711 6.79289C9.59763 7.18342 9.59763 7.81658 9.20711 8.20711L6.41421 11L20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L6.41421 13L9.20711 15.7929C9.59763 16.1834 9.59763 16.8166 9.20711 17.2071Z" />
+                                </svg>
+                            </button>
+                            <button class="btn-reset slider-nav__btn work-images__next slider-btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.7929 6.79289C15.1834 6.40237 15.8166 6.40237 16.2071 6.79289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L16.2071 17.2071C15.8166 17.5976 15.1834 17.5976 14.7929 17.2071C14.4024 16.8166 14.4024 16.1834 14.7929 15.7929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L14.7929 8.20711C14.4024 7.81658 14.4024 7.18342 14.7929 6.79289Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div thumbsSlider="" class="work-images-nav">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/small1.jpg" alt="Work 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/small1.jpg" alt="Work 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/small1.jpg" alt="Work 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/small1.jpg" alt="Work 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/small1.jpg" alt="Work 5">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/small1.jpg" alt="Work 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!--.......................SERVICES.......................-->
+            <!--.......................PROJECT-GOAL.......................-->
 
-            <section class="services">
-                <img src="images/sevices-bg-1.png" alt="" aria-hidden="true" class="services__decorate-1">
-                <img src="images/sevices-bg-2.png" alt="" aria-hidden="true" class="services__decorate-2">
-                <div class="container">
-                    <ul class="list-reset services__list">
-                        <li class="services__item grid">
-                            <div class="services__image">
-                                <img src="images/service-1.jpg" alt="services 1" class="services__image">
-                            </div>
-                            <div class="services__info">
-                                <h2 class="services__title">Construction</h2>
-                                <p class="services__descr">
-                                    Sapien, feugiat faucibus orci arcu, vulputate. Tristique varius consectetur
-                                    vulputate
-                                    arcu, scelerisque nisi, nibh. Enim semper id sodales ultricies sed ut ut augue.
-                                    Mattis
-                                    habitant venenatis, gravida posuere massa ac interdum. Eget aliquam dignissim ut
-                                    vestibulum.
-                                </p>
-                                <a href="#" class="services__link btn btn--stroke btn--stroke-primary">Learn
-                                    more</a>
-                            </div>
-                        </li>
-                        <li class="services__item services__item--reverse grid">
-                            <div class="services__image">
-                                <img src="images/service-2.jpg" alt="services 2" class="services__image">
-                            </div>
-                            <div class="services__info">
-                                <h2 class="services__title">Project Development</h2>
-                                <p class="services__descr">
-                                    Volutpat tellus mauris sit sit. Posuere ut sit vestibulum amet viverra in.
-                                    Est nulla lectus purus tincidunt massa tortor. Hendrerit vulputate elementum
-                                    blandit massa vitae amet felis eget.
-                                </p>
-                                <a href="#" class="services__link btn btn--stroke btn--stroke-primary">Learn
-                                    more</a>
-                            </div>
-                        </li>
-                        <li class="services__item grid">
-                            <div class="services__image">
-                                <img src="images/service-1.jpg" alt="services 3" class="services__image">
-                            </div>
-                            <div class="services__info">
-                                <h2 class="services__title">Interior Design</h2>
-                                <p class="services__descr">
-                                    Eleifend orci massa et facilisis orci feugiat ac. Congue in ut lacus, turpis
-                                    accumsan
-                                    gravida. Aliquet mattis dignissim massa sociis a, id bibendum. Egestas lorem eros,
-                                    mi cras amet, vel eget molestie. Turpis enim arcu, amet donec massa pellentesque
-                                    nulla
-                                    duis. Arcu dictum metus sed purus senectus faucibus eget elementum pretium.
-                                </p>
-                                <a href="#" class="services__link btn btn--stroke btn--stroke-primary">Learn
-                                    more</a>
-                            </div>
-                        </li>
-                        <li class="services__item services__item--reverse grid">
-                            <div class="services__image">
-                                <img src="images/service-4.jpg" alt="services 4" class="services__image">
-                            </div>
-                            <div class="services__info">
-                                <h2 class="services__title">Repairs</h2>
-                                <p class="services__descr">
-                                    Facilisis cursus feugiat sit pulvinar amet. Ac facilisi dictum commodo, tortor
-                                    gravida
-                                    pretium, orci. Nunc sit sollicitudin id egestas mattis. Turpis viverra nec urna
-                                    ultrices urna.
-                                </p>
-
-                                <a href="#" class="services__link btn btn--stroke btn--stroke-primary">Learn
-                                    more</a>
-
-                            </div>
-                        </li>
-                    </ul>
+            <section class="project-goal">
+                <div class="container grid">
+                    <div class="project-goal__left">
+                        <h2 class="title project-goal__title">Project goal</h2>
+                        <p class="project-goal__descr">
+                            Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms,
+                            a terrace, a pool and a garage for two cars.
+                        </p>
+                        <p class="project-goal__descr">
+                            Modern design and care for each family member to feel as comfortable as possible in the new
+                            home.
+                        </p>
+                    </div>
+                    <div class="project-goal__right">
+                        <div class="project-goal__info">
+                            <p class="project-goal__text"><span class="project-goal__caption">LOCATION</span>
+                                2464 Royal Ln. Mesa, New Jersey</p>
+                            <p class="project-goal__text"><span class="project-goal__caption">CLIENT</span>
+                                Darlene Robertson</p>
+                            <p class="project-goal__text"><span class="project-goal__caption">ARCHITECT</span>
+                                HIK Architecture</p>
+                            <p class="project-goal__text"><span class="project-goal__caption">SIZE</span>
+                                840 sq. feet</p>
+                            <p class="project-goal__text"><span class="project-goal__caption">VALUE</span>
+                                $2 million</p>
+                            <p class="project-goal__text"><span class="project-goal__caption">COMPLETED</span>
+                                May 2020</p>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            <!--........................DECISIONS.......................-->
+
+            <section class="decisions">
+                <div class="container grid">
+                    <div class="decisions__left">
+                        <img src="images/decisions-img.jpg" alt="" aria-hidden="true">
+                    </div>
+                    <div class="decisions__right">
+                        <h2 class="title decisions__title">Constructive decisions</h2>
+                        <ul class="decisions__list list-reset">
+                            <li class="decisions__item">Vitae ultrices ornare eu sed in est quisque duis id.</li>
+                            <li class="decisions__item">A fermentum in morbi pretium aliquam adipiscing donec tempus.</li>
+                            <li class="decisions__item">Mauris odio pellentesque commodo, diam.</li>
+                            <li class="decisions__item">Fermentum vestibulum est fermentum, egestas gravida scelerisque quis.</li>
+                            <li class="decisions__item">At pharetra libero blandit risus, fringilla sed commodo diam.</li>
+                            <li class="decisions__item">Integer ultricies viverra ut enim viverra ut.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+                        <!--.......................RELATED-PROJECTS.......................-->
+
+                        <section class="related-projects related-projects--work-inner">
+                            <div class="container">
+                                <div class="related-projects__top">
+                                    <h2 class="title related-projects__title">Similar projects</h2>
+                                    <div class="slider-nav related-projects__slider-nav">
+                                        <button class="btn-reset slider-nav__btn slider-btn related-projects__prev">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.20711 17.2071C8.81658 17.5976 8.18342 17.5976 7.79289 17.2071L3.29289 12.7071C2.90237 12.3166 2.90237 11.6834 3.29289 11.2929L7.79289 6.79289C8.18342 6.40237 8.81658 6.40237 9.20711 6.79289C9.59763 7.18342 9.59763 7.81658 9.20711 8.20711L6.41421 11L20 11C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13L6.41421 13L9.20711 15.7929C9.59763 16.1834 9.59763 16.8166 9.20711 17.2071Z" />
+                                            </svg>
+                                        </button>
+                                        <button class="btn-reset slider-nav__btn slider-btn related-projects__next">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M14.7929 6.79289C15.1834 6.40237 15.8166 6.40237 16.2071 6.79289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L16.2071 17.2071C15.8166 17.5976 15.1834 17.5976 14.7929 17.2071C14.4024 16.8166 14.4024 16.1834 14.7929 15.7929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L14.7929 8.20711C14.4024 7.81658 14.4024 7.18342 14.7929 6.79289Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+            
+                                <div class="swiper related-projects__items">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="related-projects-item">
+                                                <img src="images/portfolio5.jpg" alt="Portfolio cover"
+                                                    class="related-projects-item__image">
+                                                <div class="related-projects-item__content">
+                                                    <h3 class="related-projects-item__title">Luxury Beach House</h3>
+                                                    <span class="related-projects-item__descr">Private Houses</span>
+                                                    <!-- <div class="related-projects-item__btn">View Project</div> -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="related-projects-item">
+                                                <img src="images/portfolio9.jpg" alt="Portfolio cover"
+                                                    class="related-projects-item__image">
+                                                <div class="related-projects-item__content">
+                                                    <h3 class="related-projects-item__title">Brown and Gray Painted House</h3>
+                                                    <span class="related-projects-item__descr">Private Houses</span>
+                                                    <!-- <div class="related-projects-item__btn">View Project</div> -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="related-projects-item">
+                                                <img src="images/portfolio8.jpg" alt="Portfolio cover"
+                                                    class="related-projects-item__image">
+                                                <div class="related-projects-item__content">
+                                                    <h3 class="related-projects-item__title">Scandinavian Style Interior</h3>
+                                                    <span class="related-projects-item__descr">Private houses</span>
+                                                    <!-- <div class="related-projects-item__btn">View Project</div> -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="related-projects-item">
+                                                <img src="images/portfolio8.jpg" alt="Portfolio cover"
+                                                    class="related-projects-item__image">
+                                                <div class="related-projects-item__content">
+                                                    <h3 class="related-projects-item__title">Scandinavian Style Interior</h3>
+                                                    <span class="related-projects-item__descr">Private houses</span>
+                                                    <!-- <div class="related-projects-item__btn">View Project</div> -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="related-projects-item">
+                                                <img src="images/portfolio9.jpg" alt="Portfolio cover"
+                                                    class="related-projects-item__image">
+                                                <div class="related-projects-item__content">
+                                                    <h3 class="related-projects-item__title">Brown and Gray Painted House</h3>
+                                                    <span class="related-projects-item__descr">Private houses</span>
+                                                    <!-- <div class="related-projects-item__btn">View Project</div> -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="services-section__learn learn-more">
+                                    <h4 class="learn-more__subtitle">Explore all our works</h4>
+                                    <a href="#" class="btn-reset learn-more__btn btn btn--fill">View portfolio</a>
+                                </div>
+                            </div>
+                        </section>
 
             <!--.......................CONTACTS-SECTION.......................-->
 
@@ -175,7 +297,7 @@
                                 Construction
                                 Bureau.</span>
                         </label>
-                        <button class="contacts-form__btn btn btn-reset btn--fill" type="submit">send request</button>
+                        <button class="contacts-form__btn btn-reset btn btn--fill" type="submit">send request</button>
                     </form>
                 </div>
             </section>
@@ -310,6 +432,8 @@
     <script src="js/swipers.js"></script>
     <!-- Progress -->
     <script src="js/progress.js"></script>
+    <!-- Accordion -->
+    <script src="js/accordion.js"></script>
     <!-- Tabs -->
     <script src="js/portfolio-tabs.js"></script>
     <!-- Main JS -->
