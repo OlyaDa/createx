@@ -2790,3 +2790,12 @@ a {
   color: var(--color-primary);
   border-bottom: 1px solid currentColor;
 }
+
+.worldwide {
+  padding: 83px 0 118px 0;
+  background-color: var(--color-athens);
+}
+
+.worldwide__title {
+  margin-bottom: 58px;
+}
