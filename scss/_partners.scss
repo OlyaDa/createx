@@ -8,12 +8,20 @@
         padding: 183px 0 115px 0;
         background-color: var(--color-white);
     }
+    &--about {
+        background-color: var(--color-white);
+        padding: 122px 0;
+        .partners__title {
+            margin-bottom: 23px;
+        }
+    }
     &__title {
         margin-bottom: 61px;
     }
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 102px;
+        column-gap: 102px;
+        row-gap: 40px;
     }
 }

@@ -44,7 +44,10 @@
     &--work-inner {
         background-color: var(--color-white);
         background-image: url(../images/page-hero-work-inner-bg.png);
-        background-position: right 2px top 48px;
+        background-position: right 2px top 0px;
+    }
+    &--about {
+        background-image: url(../images/page-hero-about-bg.png);
     }
 }
 
