@@ -49,6 +49,10 @@
     &--about {
         background-image: url(../images/page-hero-about-bg.png);
     }
+    &--positions {
+        background-image: url(../images/page-hero-positions-bg.png);
+        background-position: right 2px bottom 0px;
+    }
 }
 
 .breadcrumbs {

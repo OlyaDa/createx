@@ -1,0 +1,98 @@
+.positions-content {
+    padding: 121px 0 90px 0;
+    &__left {
+        grid-column: 7 span;
+    }
+    &__right {
+        // padding-left: 106px;
+        display: flex;
+        justify-content: flex-end;
+        grid-column: 5 span;
+    }
+}
+.positions-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    border: 1px solid #e5e8ed;
+    border-radius: 4px;
+    padding: 32px 40px;
+    &__title {
+        margin: 0;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-dark);
+    }
+    &__meta {
+        margin-bottom: 7px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+    &__city {
+        position: relative;
+        margin-right: 22px;
+        padding-left: 23px;
+        background-image: url(../images/location.svg);
+        background-position: left center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 11px;
+            top: 50%;
+            right: -14px;
+            transform: translateY(-50%);
+            background-color: var(--color-storm);
+        }
+    }
+    &__time {
+        padding-left: 23px;
+        background-image: url(../images/clock.svg);
+        background-position: left center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+    }
+    &__link {
+        padding: 11px 30px;
+        font-size: 14px;
+        color: var(--color-primary);
+    }
+}
+
+.positions-list {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.positions-looking {
+    width: 390px;
+    &__title {
+        margin: 0;
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-dark);
+    }
+    &__descr {
+        margin: 0;
+        margin-bottom: 48px;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-gray);
+    }
+    &__btn--subs {
+        padding: 15px 44px;
+        margin-right: 26px;
+    }
+    &__btn--send {
+        padding: 15px 52px;
+    }
+}

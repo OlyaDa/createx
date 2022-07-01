@@ -1547,6 +1547,11 @@ a {
   background-image: url(../images/page-hero-about-bg.png);
 }
 
+.page-hero--positions {
+  background-image: url(../images/page-hero-positions-bg.png);
+  background-position: right 2px bottom 0px;
+}
+
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2798,4 +2803,188 @@ a {
 
 .worldwide__title {
   margin-bottom: 58px;
+}
+
+.positions-content {
+  padding: 121px 0 90px 0;
+}
+
+.positions-content__left {
+  grid-column: 7 span;
+}
+
+.positions-content__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  grid-column: 5 span;
+}
+
+.positions-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--color-white);
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  padding: 32px 40px;
+}
+
+.positions-item__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-dark);
+}
+
+.positions-item__meta {
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-storm);
+}
+
+.positions-item__city {
+  position: relative;
+  margin-right: 22px;
+  padding-left: 23px;
+  background-image: url(../images/location.svg);
+  background-position: left center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.positions-item__city::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 11px;
+  top: 50%;
+  right: -14px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--color-storm);
+}
+
+.positions-item__time {
+  padding-left: 23px;
+  background-image: url(../images/clock.svg);
+  background-position: left center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.positions-item__link {
+  padding: 11px 30px;
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.positions-list__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.positions-looking {
+  width: 390px;
+}
+
+.positions-looking__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  color: var(--color-dark);
+}
+
+.positions-looking__descr {
+  margin: 0;
+  margin-bottom: 48px;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-gray);
+}
+
+.positions-looking__btn--subs {
+  padding: 15px 44px;
+  margin-right: 26px;
+}
+
+.positions-looking__btn--send {
+  padding: 15px 52px;
+}
+
+.employee-benefits {
+  padding: 90px 0 151px 0;
+  background-color: var(--color-white);
+}
+
+.employee-benefits__list {
+  --mission-gap: 94px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 27px;
+  gap: calc(var(--mission-gap) * 2);
+}
+
+.employee-benefits__item {
+  position: relative;
+  padding-top: 71px;
+  text-align: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+
+.employee-benefits__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(-1.008 * var(--mission-gap));
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-image: url("../images/divider.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.employee-benefits__item--training {
+  background-image: url(../images/brain.svg);
+}
+
+.employee-benefits__item--growth {
+  background-image: url(../images/success.svg);
+}
+
+.employee-benefits__item--salary {
+  background-image: url(../images/budget.svg);
+}
+
+.employee-benefits__subtitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-dark);
+  margin-bottom: 11px;
+}
+
+.employee-benefits__descr {
+  margin: 0;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: var(--color-storm);
 }
