@@ -35,6 +35,9 @@
     &__social {
         position: absolute;
         bottom: 0;
+        svg {
+            fill: var(--color-white);
+        }
     }
     &__link {
         display: block;

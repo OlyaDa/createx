@@ -21,6 +21,7 @@
 @import "_recent-news";
 @import "_news-article";
 @import "_contacts-section";
+@import "_social";
 @import "_footer";
 
 //services.html
@@ -54,3 +55,9 @@
 
 //news.html
 @import "_categories";
+
+//post.html
+@import "_post";
+@import "_post-comments";
+@import "_comment";
+@import "_post-form";

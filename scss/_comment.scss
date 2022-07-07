@@ -1,0 +1,57 @@
+.comment {
+    display: flex;
+    &__left {
+        width: calc(100% - 630px);
+        padding-right: 30px;
+    }
+    &__right {
+        width: 630px;
+    }
+
+    &__author {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-dark);
+        margin-bottom: 10px;
+    }
+    &__time {
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+    &__body {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+        margin-bottom: 18px;
+        * {
+            margin: 0;
+            margin-bottom: 17px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        a {
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+    }
+    &__reply {
+        display: inline-flex;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+        svg {
+            position: relative;
+            top: 1px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            object-fit: cover;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+    }
+}
