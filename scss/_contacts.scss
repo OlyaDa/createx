@@ -22,6 +22,28 @@
         left: 0;
         top: 4px;
     }
+    .form-field {
+        margin-bottom: 24px;
+        &__caption {
+            font-size: 16px;
+            line-height: 160%;
+            margin-bottom: 9px;
+            color: var(--color-gray);
+            &--radio {
+                margin-bottom: 20px;
+            }
+        }
+        &__input {
+            font-size: 16px;
+            line-height: 160%;
+            color: #9a9ca5;
+            height: 52px;
+            &--big {
+                height: 128px;
+                margin-bottom: 15px;
+            }
+        }
+    }
 }
 
 .form-contacts {
@@ -55,34 +77,14 @@
     }
 }
 
-.form-field {
-    margin-bottom: 24px;
-    &__caption {
-        font-size: 16px;
-        line-height: 160%;
-        margin-bottom: 9px;
-        color: var(--color-gray);
-        &--radio {
-            margin-bottom: 20px;
-        }
-    }
-    &__input {
-        font-size: 16px;
-        line-height: 160%;
-        color: #9a9ca5;
-        height: 52px;
-        &--big {
-            height: 128px;
-            margin-bottom: 15px;
-        }
-    }
-}
+
 .choices__list--dropdown .choices__item--selectable::after,
 .choices__list[aria-expanded] .choices__item--selectable::after {
     display: none;
 }
 .choices {
     width: 100%;
+    border-radius: 4px;
     &__inner {
         padding: 0;
         margin: 0;
@@ -103,6 +105,15 @@
         padding-left: 15px;
         height: 100%;
     }
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+}
+
+.is-focused {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .choices__list--single .choices__placeholder {

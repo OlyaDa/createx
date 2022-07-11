@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/graph-modal.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <title>Createx Construction</title>
 </head>
@@ -572,7 +573,7 @@
 
             <!--.......................TESTIMONIALS.......................-->
 
-            <section class="testimonials">
+            <section class="testimonials testimonials--work">
                 <div class="container testimonials__container">
                     <div class="testimonials__content">
                         <h2 class="title testimonials__title">What our clients are saying</h2>
@@ -705,6 +706,15 @@
         <!--.......................FOOTER.......................-->
 
         <footer class="footer">
+            <a href="#page" data-scroll class="to-top">
+                <span class="to-top__text">Go to top</span>
+                <span class="to-top__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.7071 14.2929C20.0976 14.6834 20.0976 15.3166 19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071L12 9.41421L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071Z" />
+                    </svg>
+                </span>
+            </a>
             <div class="container footer__container grid">
                 <div class="footer__left">
                     <div class="footer__top">
@@ -825,15 +835,32 @@
         </footer>
     </div>
 
+    <!-- Include Choices JavaScript (latest) -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <!-- Swipers JavaScript Min-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Smooth Scroll Min-->
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- Modal Window Min-->
+    <script src="js/graph-modal.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Swipers -->
-    <script src="js/swipers.js"></script>
+    <!-- Accordion -->
+    <script src="js/accordion.js"></script>
+    <!-- Modal Window -->
+    <script src="js/modal.js"></script>
     <!-- Progress -->
     <script src="js/progress.js"></script>
+    <!-- Selects choice -->
+    <script src="js/selects.js"></script>
+    <!-- Swipers -->
+    <script src="js/swipers.js"></script>
     <!-- Tabs -->
     <script src="js/portfolio-tabs.js"></script>
+    <!-- To top -->
+    <script src="js/to-top.js"></script>
+    <!-- Video -->
+    <script src="js/video.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
 </body>

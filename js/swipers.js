@@ -11,6 +11,37 @@ const portfolioSlider = new Swiper('.portfolio-section__items', {
     },
 });
 
+const heroSliderSpeed = 1500;
+
+const bodyStyle = window.getComputedStyle(document.body);
+const fooBar = bodyStyle.getPropertyValue('--hero-slider-speed'); //get
+
+document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');//set
+
+const heroSlider = new Swiper('.hero-slider', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.hero__next',
+        prevEl: '.hero__prev',
+    },
+    speed: heroSliderSpeed,
+    pagination: {
+        el: '.hero__pag',
+        type: 'bullets',
+        clickable: true
+    },
+    on: {
+        init: function () {
+            const paginationBullets = document.querySelectorAll('.hero__pag .swiper-pagination-bullet');
+
+            paginationBullets.forEach(el => {
+                el.innerHTML = `<span class="hero__bar"></span>`;
+            });
+        },
+    },
+});
+
 const testimonialsSlider = new Swiper('.testimonials__items', {
     slidesPerView: 1,
     loop: true,

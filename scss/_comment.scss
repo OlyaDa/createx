@@ -36,6 +36,17 @@
         a {
             font-weight: 700;
             color: var(--color-primary);
+            transition: color 0.3s ease-in-out;
+            &:focus {
+                outline: 2px solid var(--color-primary);
+                outline-offset: 2px;
+            }
+            &:hover {
+                color: var(--color-primary);
+            }
+            &:active {
+                color: var(--color-active);
+            }
         }
     }
     &__reply {
@@ -43,6 +54,7 @@
         font-size: 14px;
         line-height: 150%;
         color: var(--color-storm);
+        transition: color 0.3s ease-in-out;
         svg {
             position: relative;
             top: 1px;
@@ -52,6 +64,16 @@
             object-fit: cover;
             margin-right: 8px;
             fill: currentColor;
+        }
+        &:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        &:hover {
+            color: var(--color-primary);
+        }
+        &:active {
+            color: var(--color-active);
         }
     }
 }

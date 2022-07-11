@@ -30,6 +30,17 @@
         text-decoration-line: underline;
         color: var(--color-primary);
         margin-bottom: 19px;
+        transition: color 0.3s ease-in-out;
+        &:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        &:hover {
+            color: var(--color-active);
+        }
+        &:active {
+            color: var(--color-active);
+        }
     }
     &__element {
         color: var(--color-storm);
@@ -41,6 +52,17 @@
         font-size: 16px;
         line-height: 160%;
         color: var(--color-dark);
+        transition: color 0.3s ease-in-out;
+        &:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        &:hover {
+            color: var(--color-primary);
+        }
+        &:active {
+            color: var(--color-active);
+        }
     }
     &__social {
         display: flex;

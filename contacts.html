@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/accordion.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!-- Include Choices CSS -->
+    <link rel="stylesheet" href="css/graph-modal.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <title>Createx Construction</title>
@@ -31,7 +29,7 @@
                         <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">News</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--current">Contacts</a></li>
                     </ul>
                 </nav>
                 <div class="header-contacts">
@@ -151,7 +149,8 @@
             <section class="contacts-info">
                 <div class="container">
                     <h2 class="title title--center">Our offices</h2>
-                    <p class="descr descr--center">Give us a call, send us a note or visit our office. We can’t wait to hear from you!</p>
+                    <p class="descr descr--center">Give us a call, send us a note or visit our office. We can’t wait to
+                        hear from you!</p>
                     <ul class="list-reset contacts-info__list">
                         <li class="contacts-info__item">
                             <h3 class="contacts-info__subtitle">New York, USA</h3>
@@ -162,7 +161,8 @@
                                     <a href="tel:4055550128" class="contacts-info__value">(405) 555-0128</a>
                                 </div>
                                 <div class="contacts-info__element">Email:
-                                    <a href="mailto:hello@createx.com" class="contacts-info__value">hello@createx.com</a>
+                                    <a href="mailto:hello@createx.com"
+                                        class="contacts-info__value">hello@createx.com</a>
                                 </div>
                                 <div class="contacts-info__element">Schedule:
                                     <span class="contacts-info__value">Mon - Fri 9:00 - 18:00</span>
@@ -178,7 +178,8 @@
                                     <a href="tel:8085550111" class="contacts-info__value">(808) 555-0111</a>
                                 </div>
                                 <div class="contacts-info__element">Email:
-                                    <a href="mailto:hello@createx.com" class="contacts-info__value">hello@createx.com</a>
+                                    <a href="mailto:hello@createx.com"
+                                        class="contacts-info__value">hello@createx.com</a>
                                 </div>
                                 <div class="contacts-info__element">Schedule:
                                     <span class="contacts-info__value">Mon - Fri 9:00 - 18:00</span>
@@ -187,14 +188,16 @@
                         </li>
                         <li class="contacts-info__item">
                             <h3 class="contacts-info__subtitle">San Francisco, USA</h3>
-                            <address class="contacts-info__address">8502 Preston Rd. Inglewood, San Francisco 98380</address>
+                            <address class="contacts-info__address">8502 Preston Rd. Inglewood, San Francisco 98380
+                            </address>
                             <a href="#" class="contacts-info__link">See on the map</a>
                             <div class="contacts-info__bottom">
                                 <div class="contacts-info__element">Call:
                                     <a href="tel:5055550125" class="contacts-info__value">(505) 555-0125</a>
                                 </div>
                                 <div class="contacts-info__element">Email:
-                                    <a href="mailto:hello@createx.com" class="contacts-info__value">hello@createx.com</a>
+                                    <a href="mailto:hello@createx.com"
+                                        class="contacts-info__value">hello@createx.com</a>
                                 </div>
                                 <div class="contacts-info__element">Schedule:
                                     <span class="contacts-info__value">Mon - Fri 10:00 - 19:00</span>
@@ -263,6 +266,15 @@
         <!--.......................FOOTER.......................-->
 
         <footer class="footer">
+            <a href="#page" data-scroll class="to-top">
+                <span class="to-top__text">Go to top</span>
+                <span class="to-top__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.7071 14.2929C20.0976 14.6834 20.0976 15.3166 19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071L12 9.41421L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071Z" />
+                    </svg>
+                </span>
+            </a>
             <div class="container footer__container grid">
                 <div class="footer__left">
                     <div class="footer__top">
@@ -383,20 +395,32 @@
         </footer>
     </div>
 
-
-
-    <!-- Swipers -->
-    <script src="js/swipers.js"></script>
-    <!-- Progress -->
-    <script src="js/progress.js"></script>
-    <!-- Accordion -->
-    <script src="js/accordion.js"></script>
-    <!-- Tabs -->
-    <script src="js/portfolio-tabs.js"></script>
     <!-- Include Choices JavaScript (latest) -->
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <!-- Swipers JavaScript Min-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Smooth Scroll Min-->
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- Modal Window Min-->
+    <script src="js/graph-modal.min.js"></script>
+
+    <!-- Accordion -->
+    <script src="js/accordion.js"></script>
+    <!-- Modal Window -->
+    <script src="js/modal.js"></script>
+    <!-- Progress -->
+    <script src="js/progress.js"></script>
     <!-- Selects choice -->
     <script src="js/selects.js"></script>
+    <!-- Swipers -->
+    <script src="js/swipers.js"></script>
+    <!-- Tabs -->
+    <script src="js/portfolio-tabs.js"></script>
+    <!-- To top -->
+    <script src="js/to-top.js"></script>
+    <!-- Video -->
+    <script src="js/video.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
 </body>

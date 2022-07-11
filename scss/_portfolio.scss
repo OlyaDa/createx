@@ -28,6 +28,18 @@
         padding: 15px;
         color: var(--color-primary);
         transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        &:focus {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        &:hover {
+            .portfolio-tabs-nav__text {
+                color: var(--color-gray);
+            }
+        }
+        &:active {
+            color: var(--color-primary);
+        }
         &--active {
             color: var(--color-white);
             background-color: var(--color-primary);
@@ -78,7 +90,18 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-gray);
-    margin-top: 62px;
+    margin-top: 59px;
+    transition: color 0.3s ease-in-out;
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+    &:hover {
+        color: var(--color-primary);
+    }
+    &:active {
+        color: var(--color-active);
+    }
     svg {
         fill: currentColor;
         color: inherit;

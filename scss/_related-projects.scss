@@ -3,6 +3,24 @@
     background-color: var(--color-white);
     &--work-inner {
         padding: 179px 0 120px 0;
+        .related-projects-item {
+            padding-bottom: 4px;
+            &:hover {
+                .related-projects-item__content {
+                    bottom: 0;
+                }
+            }
+            &__content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 16px 0 23px 0;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
     }
     &__top {
         display: flex;
@@ -25,7 +43,6 @@
 .slider-nav {
     display: flex;
     align-items: center;
-    // position: relative;
     z-index: 5;
     &__btn {
         display: flex;
@@ -44,26 +61,40 @@
             fill: currentColor;
             object-fit: cover;
         }
-        &:hover {
-            color: var(--color-white);
-            background-color: var(--color-primary);
-        }
     }
 }
 
 .related-projects-item {
-    display: flex;
+    position: relative;
     overflow: hidden;
+    padding-bottom: 95px;
+    display: flex;
     flex-direction: column;
     border-radius: 4px;
     box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
         0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
-    background: #ffffff;
+    background-color: var(--color-white);
+    margin: 4px;
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+    &:hover {
+        .related-projects-item__content {
+            bottom: -4px;
+        }
+    }
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 16px 0 23px 0;
+        position: absolute;
+        bottom: -70px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        transition: 0.5s ease-in-out;
     }
     &__title {
         margin: 0;
@@ -80,7 +111,7 @@
         color: var(--color-storm);
     }
     &__btn {
-        display: none;
+        display: inline-block;
         margin-top: 24px;
         justify-content: center;
         font-weight: 700;
@@ -93,4 +124,3 @@
         border-radius: 4px;
     }
 }
-
