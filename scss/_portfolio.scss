@@ -75,7 +75,7 @@
         display: none;
         grid-column: 4 span;
         &--visible {
-            display: block;
+            display: block !important;;
         }
         &--visible-more {
             display: block !important;

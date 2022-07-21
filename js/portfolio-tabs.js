@@ -62,21 +62,25 @@ if (portfolioTabsNav) {
     isLoadMoreNeeded(portfolioTabsItemsVisible);
 
     loadMore.addEventListener('click', (e) => {
-        const visibleItems = document.querySelectorAll('.portfolio-tabs__item--visible');
-
+        const visibleItemsLength = document.querySelectorAll('.portfolio-tabs__item--visible').length;
         const path = document.querySelector('.portfolio-tabs-nav__btn--active').dataset.path;
-        console.log(path)
-
         if (path == 'all') {
-            portfolioTabsItems.forEach(el => {
-                el.classList.add('portfolio-tabs__item--visible-more');
+            console.log("items=" + visibleItemsLength + "/"+ portfolioTabsItems.length);
+            Array.from(portfolioTabsItems).slice(visibleItemsLength, visibleItemsLength + maxItems).forEach(el => {
+                el.classList.add('portfolio-tabs__item--visible');
+            });
+            if (portfolioTabsItems.length < visibleItemsLength + maxItems) {
                 loadMore.style.display = 'none';
-            });
+            }
         } else {
-            document.querySelectorAll(`[data-target="${path}"]`).forEach(el => {
-                el.closest('.portfolio-tabs__item').classList.add('portfolio-tabs__item--visible-more');
+            const portfolioPathItems = document.querySelectorAll(`[data-target="${path}"]`);
+            console.log("items=" + visibleItemsLength + "/"+ portfolioPathItems.length);
+            Array.from(portfolioPathItems).slice(visibleItemsLength, visibleItemsLength + maxItems).forEach(el => {
+                el.closest('.portfolio-tabs__item').classList.add('portfolio-tabs__item--visible');
             });
-            loadMore.style.display = 'none';
+            if (portfolioPathItems.length < visibleItemsLength + maxItems) {
+                loadMore.style.display = 'none';
+            }
         }
     });
 }
