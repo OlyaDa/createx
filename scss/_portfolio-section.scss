@@ -93,6 +93,12 @@
             background-color: var(--color-active);
             border-radius: 100%;
         }
+        &:focus-visible {
+            border-radius: 100%;
+        }
+        &:focus-within {
+            border-radius: 100%;
+        }
     }
 }
 

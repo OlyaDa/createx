@@ -1962,6 +1962,14 @@ a {
   border-radius: 100%;
 }
 
+.slider-nav__btn:focus-visible {
+  border-radius: 100%;
+}
+
+.slider-nav__btn:focus-within {
+  border-radius: 100%;
+}
+
 .portfolio-item {
   position: relative;
   overflow: hidden;
