@@ -49,7 +49,7 @@
         }
 
         @include mobile {
-            display: none;
+            bottom: 20px !important;
         }
 
         .swiper-pagination-bullet {

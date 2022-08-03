@@ -89,10 +89,11 @@ class GraphAccordion {
         this.control = this.accordion.querySelector('.accordion__control');
         this.content = this.accordion.querySelector('.accordion__content');
         this.event();
+        this.start();
     }
 
     event() {
-        console.log('event!');
+        // console.log('event!');
 
         if (this.accordion) {
             this.accordion.addEventListener('click', (e) => {
@@ -104,6 +105,19 @@ class GraphAccordion {
                     this.close();
                 }
             });
+        }
+    }
+
+    start() {
+        // console.log('start!');
+        
+        if (this.accordion) {
+            if (this.accordion.classList.contains('is-open')) {
+                this.open()
+            }
+            else {
+                this.close();
+            }
         }
     }
 
@@ -125,10 +139,12 @@ class GraphAccordion {
     }
 }
 
-const accordion1 = new GraphAccordion('.accordion-1', {
-    speed: 500,
-});
+if (document.querySelector('.we-offer')) {
+    const accordion1 = new GraphAccordion('.accordion-1', {
+        speed: 500,
+    });
 
-const accordion2 = new GraphAccordion('.accordion-2', {
-    speed: 500
-});
+    const accordion2 = new GraphAccordion('.accordion-2', {
+        speed: 500
+    });
+}

@@ -85,15 +85,14 @@
         left: 0;
         top: 0;
         padding: 50px;
-        width: 80%;
+        opacity: 0;
         overflow-y: auto;
+        width: 80%;
         height: 100vh;
-        display: block;
         background-color: var(--color-white);
         z-index: 500;
-        transform: translateX(-100%);
+        transform: translateX(-200%);
         transition: transform 0.3s ease-in-out;
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -103,17 +102,12 @@
     @include mobile {
         padding: 20px;
     }
-
-    &--active {
-        @include tablet {
-            transform: none;
-        }
-    }
 }
 
 .header__nav--active {
     @include tablet {
-        transform: none;
+        opacity: 1;
+        transform: translateX(0) !important;
     }
 }
 
