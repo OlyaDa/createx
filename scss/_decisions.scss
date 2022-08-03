@@ -1,15 +1,50 @@
 .decisions {
     padding: 80px 0 0 0;
     background-color: var(--color-athens);
+
+    @include minidesk {
+        padding: 80px 0 80px 0;
+    }
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
+    &__container {
+        @include minitablet {
+            display: block;
+        }
+    }
+
     &__left {
         grid-column: 5 span;
         img {
             margin-bottom: -64px;
+
+            @include minitablet {
+                margin-bottom: 30px;
+            }
+        }
+
+        @include minitablet {
+            text-align: center;
         }
     }
     &__right {
         grid-column: 7 span;
         padding-left: 104px;
+
+        @include minidesk {
+            padding-left: 70px;
+        }
+
+        @include minidesk {
+            padding-left: 0;
+        }
     }
     &__item {
         position: relative;
@@ -35,5 +70,13 @@
     }
     &__title {
         margin-bottom: 60px;
+
+        @include minitablet {
+            margin-bottom: 40px;
+        }
+    
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
 }

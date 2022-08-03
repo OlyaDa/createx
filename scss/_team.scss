@@ -5,14 +5,36 @@
     background-image: url(../images/team-bg.png);
     background-position: left 4px bottom -321px;
     background-repeat: no-repeat;
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
     &__list {
         column-gap: var(--grid-gap);
         row-gap: 60px;
         margin-bottom: 79px;
+
+        @include minitablet {
+            row-gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__item {
         z-index: 5;
         grid-column: 3 span;
+
+        @include tablet {
+            grid-column: 6 span;
+        }
+
         &:hover {
             .team__social {
                 opacity: 0.7;
@@ -22,9 +44,13 @@
     &__top {
         overflow: hidden;
         position: relative;
+        text-align: center;
         margin-bottom: 12px;
         transition: 0.5s ease-in-out;
         border-radius: 4px;
+    }
+    &__image {
+        width: 100%;
     }
     &__name {
         font-weight: 700;
@@ -52,6 +78,10 @@
         background-color: var(--color-primary);
         opacity: 0;
         border-radius: 4px;
+
+        @include minitablet {
+            opacity: 0.7;
+        }
     }
     &__link {
         display: block;

@@ -2,16 +2,39 @@
     padding: 80px 0;
     color: rgba(255, 255, 255, 0.6);
     background-color: var(--color-dark);
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
     &__left {
         grid-column: 7 span;
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__top {
         display: flex;
         align-items: center;
         margin-bottom: 23px;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__logo {
         margin-right: 60px;
+        min-width: 143px;
+
+        @include mobile {
+            display: block;
+            margin-bottom: 20px;
+        }
     }
     &__descr {
         margin: 0;
@@ -23,12 +46,24 @@
     }
     &__form {
         grid-column: 5 span;
+
+        @include minitablet {
+            grid-column: 12 span;
+        }
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__address {
         grid-column: 4 span;
     }
     &__nav {
         grid-column: 8 span;
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__copyright {
         grid-column: 12 span;
@@ -43,6 +78,12 @@
             background-repeat: no-repeat;
             padding-left: 22px;
         }
+
+        @include mobile {
+            grid-column: 4 span;
+            padding: 0;
+        }
+
     }
 }
 
@@ -102,6 +143,10 @@
 .footer-address {
     padding-top: 19px;
     font-style: normal;
+
+    @include mobile {
+        padding-top: 0;
+    }
     &__item {
         display: block;
         font-size: 16px;
@@ -133,9 +178,27 @@
     display: flex;
     padding-top: 20px;
     padding-left: 54px;
+
+    @include minitablet {
+        padding-left: 14px;
+    }
+
+    @include mobile {
+        padding: 0;
+        display: block;
+    }
+
     &__col {
         &:not(:last-child) {
             margin-right: 125px;
+
+            @include minitablet {
+                margin-right: 44px;
+            }
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
         }
     }
     &__item {

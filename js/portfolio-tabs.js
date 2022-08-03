@@ -85,19 +85,5 @@ if (portfolioTabsNav) {
     });
 }
 
-//сделать так, чтобы открывались следущие 9 эл-ов, а не все
-
-
-// $(function () {
-//     $(".portfolio-tabs__item").slice(0, 9).show();
-//     $("body").on('click touchstart', '.portfolio-more', function (e) {
-//         e.preventDefault();
-//         $(".portfolio-tabs__item:hidden").slice(0, 9).slideDown();
-//         if ($(".portfolio-tabs__item:hidden").length == 0) {
-//             $(".portfolio-more").css('visibility', 'hidden');
-//         }
-//     });
-// });
-
 
 

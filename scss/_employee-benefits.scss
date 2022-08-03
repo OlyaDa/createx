@@ -1,12 +1,33 @@
 .employee-benefits {
     padding: 90px 0 151px 0;
     background-color: var(--color-white);
+
+    @include minitablet {
+        padding: 60px 0 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0 40px 0;
+    }
+
     &__list {
         --mission-gap: 94px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 27px;
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+
+        @include minitablet {
+            --mission-gap: 10px;
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
     &__item {
         position: relative;
@@ -37,6 +58,10 @@
         }
         &--salary {
             background-image: url(../images/budget.svg);
+        }
+
+        @include mobile {
+            margin-bottom: 25px;
         }
     }
     &__subtitle {

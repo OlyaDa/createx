@@ -9,5 +9,21 @@
         line-height: 150%;
         color: var(--color-dark);
         margin-right: 40px;
+
+        @include minitablet {
+            max-width: 55%;
+            margin-right: 10px;
+            line-height: 40px;
+        }
+
+        @include mobile {
+            max-width: 100%;
+            margin-right: 0px;
+            margin-bottom: 25px;
+        }
+    }
+
+    @include mobile {
+        display: block;
     }
 }

@@ -1,16 +1,44 @@
 .we-offer {
     padding: 120px 0;
     background-color: var(--color-white);
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
+    &__container {
+        @include minitablet {
+            display: block;
+        }
+    }
+
     &__image {
         img {
             border-radius: 4px;
         }
         grid-column: 7 span;
+
+        @include tablet {
+            grid-column: 6 span;
+        }
+
+        @include minitablet {
+            margin-bottom: 30px;
+        }
     }
     &__content {
         grid-column: 5 span;
         padding-left: 75px;
         padding-top: 2px;
+
+        @include tablet {
+            padding-left: 0;
+            grid-column: 6 span;
+        }
     }
     &__title {
         font-family: "Lato", sans-serif;
@@ -19,10 +47,22 @@
         line-height: 130%;
         color: var(--color-dark);
         margin-bottom: 60px;
+
+        @include minitablet {
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__accordion {
         &:not(:last-of-type) {
             margin-bottom: 15px;
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
         }
         .accordion__control {
             position: relative;
@@ -88,3 +128,4 @@
         }
     }
 }
+

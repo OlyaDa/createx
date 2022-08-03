@@ -1,12 +1,10 @@
 @mixin font-face($font-family, $url, $weight, $style) {
     @font-face {
         font-family: "#{font-family}";
-        src: url('../fonts/#{$url}.eot');
-        src: url('../fonts/#{$url}.eot') format('embedded-opentype'),
-            url('../fonts/#{$url}.woff2') format('woff2'),
-            url('../fonts/#{$url}.woff') format('woff'),
-            url('../fonts/#{$url}.ttf') format('truetype'),
-            url('../fonts/#{$url}.svg##{$url}') format('svg');
+        src: url("../fonts/#{$url}.eot");
+        src: url("../fonts/#{$url}.eot") format("embedded-opentype"), url("../fonts/#{$url}.woff2") format("woff2"),
+            url("../fonts/#{$url}.woff") format("woff"), url("../fonts/#{$url}.ttf") format("truetype"),
+            url("../fonts/#{$url}.svg##{$url}") format("svg");
         font-weight: #{$weight};
         font-display: swap;
         font-style: $style;
@@ -55,12 +53,11 @@ $browser-context: 16; // Default
     background-image: url("#{$pathToImage}.jpg");
     /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
     background-image: image-set(
-        /* stylelint-disable-next-line function-comma-newline-after */
-        "#{$pathToImage}.avif"type("image/avif"),
+        /* stylelint-disable-next-line function-comma-newline-after */ "#{$pathToImage}.avif"type("image/avif"),
         "#{$pathToImage}.webp"type("image/webp"),
         "#{$pathToImage}.jpg"type("image/jpg")
-        );
-    }
+    );
+}
 
 @mixin footerToBottom {
     display: grid;
@@ -96,4 +93,40 @@ $browser-context: 16; // Default
 @mixin pseudo() {
     content: "";
     display: block;
+}
+
+@mixin desktop {
+    @media (min-width: (1025px)) {
+        @content;
+    }
+}
+
+@mixin middledesk {
+    @media (max-width: (1440px)) {
+        @content;
+    }
+}
+
+@mixin minidesk {
+    @media (max-width: (1200px)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: (1024px)) {
+        @content;
+    }
+}
+
+@mixin minitablet {
+    @media (max-width: (768px)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: (576px)) {
+        @content;
+    }
 }

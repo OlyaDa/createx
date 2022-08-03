@@ -1,11 +1,30 @@
 .history {
     padding: 62px 0 99px 0;
     background-color: var(--color-athens);
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
+    &__content {
+        @include minitablet {
+            display: block;
+        }
+    }
+
     &__top {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 49px;
+
+        @include minitablet {
+            margin-bottom: 25px;
+        }
     }
     &__title {
         margin: 0;
@@ -33,6 +52,11 @@
 .history-nav {
     position: relative;
     grid-column: 4 span;
+
+    @include minitablet {
+        margin-bottom: 25px;
+    }
+    
     &::before {
         content: "";
         position: absolute;
@@ -82,10 +106,18 @@
         &--active {
             color: var(--color-primary);
         }
+
+        @include tablet {
+            font-size: 22px;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-bottom: 20px;
+
+            @include mobile {
+                margin-bottom: 5px;
+            }
         }
     }
 }

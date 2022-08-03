@@ -10,6 +10,10 @@
         z-index: 30;
         background-color: var(--color-white);
         transform: translateY(-50%);
+
+        @include middledesk {
+            display: none !important;
+        }
     }
 
     &__prev {
@@ -19,6 +23,10 @@
         z-index: 30;
         background-color: var(--color-white);
         transform: translateY(-50%);
+
+        @include middledesk {
+            display: none !important;
+        }
     }
 
     &__pag {
@@ -26,6 +34,23 @@
         left: calc((100% - 1230px) / 2) !important;
         bottom: 119px !important;
         display: flex;
+
+        @include middledesk {
+            left: 3% !important;
+        }
+
+        @include minidesk {
+            left: 15px !important;
+        }
+
+        @include minitablet {
+            width: calc(100% - 30px) !important;
+            bottom: 50px !important;
+        }
+
+        @include mobile {
+            display: none;
+        }
 
         .swiper-pagination-bullet {
             display: flex;
@@ -49,6 +74,10 @@
 
             &::after {
                 display: none;
+            }
+
+            @include minitablet {
+                width: 25%;
             }
         }
     }
@@ -78,8 +107,18 @@
 
     &__btns {
         .btn {
+
+            @include mobile {
+                padding: 15px 25px;
+            }
+
             &:not(:last-child) {
                 margin-right: 20px;
+
+                @include mobile {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -112,9 +151,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--color-gray);
+
+    @include minitablet {
+        padding-top: 200px;
+        padding-bottom: 250px;
+    }
+
+    @include mobile {
+        padding: 100px 0;
+    }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0;
     &:not(:last-child) {
         margin-right: 4px;

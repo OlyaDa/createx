@@ -5,12 +5,30 @@
     background-image: url(../images/achieve-bg.png);
     background-position: right 2px bottom -530px;
     background-repeat: no-repeat;
+
+    @include minitablet {
+        padding: 60px 0 0 0;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 72px;
         margin: 0 auto;
         margin-bottom: 239px;
+
+        @include minidesk {
+            gap: 0px;
+        }
+
+        @include minitablet {
+            margin-bottom: 60px;
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 40px;
+        }
     }
     &__item {
         display: flex;
@@ -20,6 +38,7 @@
         background-position: top center;
         background-size: 48px 48px;
         background-repeat: no-repeat;
+
         &--reccom {
             background-image: url(../images/achiv-like.svg);
         }
@@ -32,6 +51,11 @@
         &--finish {
             background-image: url(../images/achiv-pantone.svg);
         }
+
+        @include tablet {
+            grid-column: 2 span;
+            margin-bottom: 50px;
+        }
     }
     &__value {
         font-weight: 700;
@@ -40,6 +64,11 @@
         color: var(--color-primary);
         margin-top: 69px;
         margin-bottom: 8px;
+
+        @include minidesk {
+            font-size: 36px;
+            line-height: 54px;
+        }
     }
     &__text {
         font-size: 14px;
@@ -50,6 +79,18 @@
     &__content {
         display: flex;
         align-items: flex-start;
+
+        @include minitablet {
+            display: block;
+        }
+    }
+    &__image {
+        @include minidesk {
+            width: 48%;
+        }
+        @include minitablet {
+            width: 100%;
+        }
     }
     &__info {
         position: relative;
@@ -63,6 +104,18 @@
             0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
         border-radius: 4px;
         background-color: var(--color-white);
+
+        @include minidesk {
+            padding: 80px 20px 48px 58px;
+            width: 56%;
+        }
+
+        @include minitablet {
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 25px 20px 48px 40px;
+        }
     }
 }
 

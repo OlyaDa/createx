@@ -3,6 +3,17 @@
     padding-top: 183px;
     padding-bottom: 90px;
     z-index: -1;
+
+    @include minitablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -21,9 +32,31 @@
         gap: 48px;
         max-width: 736px;
         margin: 0 auto;
+
+        @include minitablet {
+            gap: 25px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
+
+    &__item {
+        @include minitablet {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
     &__title {
         margin-bottom: 60px;
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
 }
 

@@ -24,6 +24,11 @@ body {
     font-style: normal;
     font-weight: normal;
 }
+
+.site-container {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1260px;
     padding: 0 15px;
@@ -143,6 +148,16 @@ a {
     &--home {
         color: var(--color-white);
     }
+
+    @include minitablet {
+        font-size: 60px;
+        line-height: 75px;
+    }
+
+    @include mobile {
+        font-size: 32px;
+        line-height: 45px;
+    }
 }
 
 .main-descr {
@@ -153,6 +168,11 @@ a {
     &--home {
         margin-bottom: 60px;
         color: var(--color-white);
+    }
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -166,6 +186,11 @@ a {
     &--center {
         text-align: center;
     }
+
+    @include mobile {
+        font-size: 28px;
+        line-height: 40px;
+    }
 }
 
 .descr {
@@ -177,16 +202,46 @@ a {
     &--center {
         text-align: center;
     }
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 25px;
+    }
+}
+
+.center {
+    text-align: center;
 }
 
 .section-offset {
     padding-top: 120px;
+
+    @include minitablet {
+        padding-top: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+    }
 }
 
 .centered {
     width: 100%;
     text-align: center;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+
+    @include mobile {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+//Checkbox
 
 .custom-checkbox {
     &__input {
@@ -240,6 +295,8 @@ a {
     }
 }
 
+//File
+
 .custom-file {
     cursor: pointer;
     display: inline-block;
@@ -267,6 +324,8 @@ a {
         outline: 3px solid var(--color-primary);
     }
 }
+
+//Radio check
 
 .custom-radio {
     &:not(:last-child) {
@@ -324,11 +383,7 @@ a {
     }
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--grid-gap);
-}
+//To top
 
 .to-top {
     display: flex;
@@ -340,10 +395,7 @@ a {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    // &:focus {
-    //     outline: 2px solid var(--color-primary);
-    //     outline-offset: 2px;
-    // }
+
     &:hover {
         .to-top__icon {
             background-color: var(--color-active);
@@ -382,7 +434,110 @@ a {
             fill: var(--color-white);
         }
     }
+
+    @include middledesk {
+        right: 20px;
+        bottom: 20px;
+    }
 }
+
+//Burger menu
+
+.burger {
+    --burger-width: 40px;
+    --burger-height: 20px;
+    --burger-line-height: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    display: none;
+    position: relative;
+    border: none;
+    padding: 0;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include tablet {
+        display: block;
+    }
+}
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.burger::before {
+    top: 0;
+}
+.burger::after {
+    top: calc(100% - var(--burger-line-height));
+}
+.burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+}
+.burger--active::before {
+    top: 50%;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.burger--active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.burger--active .burger__line {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+.burger:focus::after {
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    background-color: rgba(#000, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dis-scroll {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+//Modal window
 
 .site-modal {
     border-radius: 4px;
@@ -400,6 +555,11 @@ a {
         width: 24px;
         height: 24px;
         background-image: url("../images/close-modal.svg");
+
+        @include mobile {
+            right: 10px;
+            top: 10px;
+        }
     }
 
     &__caption {
@@ -521,5 +681,19 @@ a {
         line-height: 150%;
         color: #9a9ca5;
         opacity: 1;
+    }
+
+    @include mobile {
+        padding: 20px;
+        padding-top: 40px;
+        width: 90%;
+    }
+}
+
+.modal {
+    @include mobile {
+        &::before {
+            display: none;
+        }
     }
 }

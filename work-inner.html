@@ -27,10 +27,21 @@
                     <ul class="nav__list list-reset">
                         <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link nav__link--current">Work</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">News</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
                     </ul>
+                    <div class="header-contacts header-contacts--nav">
+                        <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
+                            <span class="contacts-link__caption">Call us</span>
+                            <span class="contacts-link__value">(405) 555-0128</span>
+                        </a>
+                        <a href="mailto:hello@createx.com"
+                            class="header-contacts__link contacts-link contacts-link--mail">
+                            <span class="contacts-link__caption">Talk to us</span>
+                            <span class="contacts-link__value">hello@createx.com</span>
+                        </a>
+                    </div>
                 </nav>
                 <div class="header-contacts">
                     <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
@@ -42,6 +53,9 @@
                         <span class="contacts-link__value">hello@createx.com</span>
                     </a>
                 </div>
+                <button class="btn-reset burger">
+                    <span class="burger__line"></span>
+                </button>
             </div>
         </header>
 
@@ -127,7 +141,7 @@
             <!--.......................PROJECT-GOAL.......................-->
 
             <section class="project-goal">
-                <div class="container grid">
+                <div class="project-goal__container container grid">
                     <div class="project-goal__left">
                         <h2 class="title project-goal__title">Project goal</h2>
                         <p class="project-goal__descr">
@@ -142,17 +156,23 @@
                     <div class="project-goal__right">
                         <div class="project-goal__info">
                             <p class="project-goal__text"><span class="project-goal__caption">LOCATION</span>
-                                2464 Royal Ln. Mesa, New Jersey</p>
+                                <span class="project-goal__category">2464 Royal Ln. Mesa, New Jersey</span>
+                            </p>
                             <p class="project-goal__text"><span class="project-goal__caption">CLIENT</span>
-                                Darlene Robertson</p>
+                                <span class="project-goal__category">Darlene Robertson</span>
+                            </p>
                             <p class="project-goal__text"><span class="project-goal__caption">ARCHITECT</span>
-                                HIK Architecture</p>
+                                <span class="project-goal__category"> HIK Architecture</span>
+                            </p>
                             <p class="project-goal__text"><span class="project-goal__caption">SIZE</span>
-                                840 sq. feet</p>
+                                <span class="project-goal__category"> 840 sq. feet</span>
+                            </p>
                             <p class="project-goal__text"><span class="project-goal__caption">VALUE</span>
-                                $2 million</p>
+                                <span class="project-goal__category"> $2 million</span>
+                            </p>
                             <p class="project-goal__text"><span class="project-goal__caption">COMPLETED</span>
-                                May 2020</p>
+                                <span class="project-goal__category"> May 2020</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +181,7 @@
             <!--........................DECISIONS.......................-->
 
             <section class="decisions">
-                <div class="container grid">
+                <div class="decisions__container container grid">
                     <div class="decisions__left">
                         <img src="images/decisions-img.jpg" alt="" aria-hidden="true">
                     </div>
@@ -448,6 +468,8 @@
     <!-- Modal Window Min-->
     <script src="js/graph-modal.min.js"></script>
 
+    <!-- Burger -->
+    <script src="js/burger.js"></script>
     <!-- Accordion -->
     <script src="js/accordion.js"></script>
     <!-- Modal Window -->

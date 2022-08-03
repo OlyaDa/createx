@@ -5,6 +5,18 @@
     background-color: var(--color-athens);
     background-repeat: no-repeat;
     background-position: right 5px top;
+
+    @include minitablet {
+        padding-top: 153px;
+        padding-bottom: 160px;
+        min-height: auto;
+    }
+
+    @include mobile {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     &__title {
         margin: 0;
         font-weight: 700;
@@ -14,9 +26,30 @@
         color: var(--color-dark);
         margin-bottom: 24px;
         max-width: 600px;
+
+        @include minitablet {
+            font-size: 60px;
+            line-height: 75px;
+        }
+
+        @include mobile {
+            font-size: 32px;
+            line-height: 45px;
+        }
+
         &--work-inner {
             font-size: 64px;
             line-height: 120%;
+
+            @include minitablet {
+                font-size: 60px;
+                line-height: 75px;
+            }
+        
+            @include mobile {
+                font-size: 32px;
+                line-height: 45px;
+            }
         }
         &--mb {
             margin-bottom: 59px;
@@ -28,10 +61,19 @@
         line-height: 150%;
         color: var(--color-storm);
         max-width: 600px;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     &__bottom {
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__meta {
         .article-meta__item {
@@ -61,6 +103,10 @@
         .article-meta__item--comments {
             background-size: 20px 20px;
         }
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__social {
         svg {
@@ -83,6 +129,18 @@
         background-color: var(--color-white);
         background-image: url(../images/page-hero-work-inner-bg.png);
         background-position: right 2px top 0px;
+
+        @include minitablet {
+            padding-bottom: 100px;
+        }
+
+        @include minitablet {
+            padding-bottom: 60px;
+        }
+
+        @include mobile {
+            padding-bottom: 0;
+        }
     }
     &--about {
         background-image: url(../images/page-hero-about-bg.png);
@@ -94,6 +152,20 @@
             line-height: 120%;
             text-transform: initial;
             margin-bottom: 48px;
+
+            @include minitablet {
+                font-size: 45px;
+                line-height: 58px;
+            }
+
+            @include mobile {
+                font-size: 32px;
+                line-height: 45px;
+            }
+        }
+
+        @include minidesk {
+            margin-bottom: 40px;
         }
     }
     &--positions {
@@ -108,14 +180,24 @@
         background-image: url(../images/page-hero-contacts-bg.png);
         background-position: right 2px bottom 0px;
     }
+
+    @include tablet {
+        background-image: none;
+    }
 }
 
 .breadcrumbs {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     &__item {
         &:not(:last-child) {
             margin-right: 22px;
+
+            @include mobile {
+                margin-right: 15px;
+            }
+
             ::after {
                 content: "/";
                 position: absolute;

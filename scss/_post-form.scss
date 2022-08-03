@@ -1,19 +1,46 @@
 .post-form {
     padding-top: 40px;
     padding-bottom: 180px;
+
+    @include minitablet {
+        padding-bottom: 60px;
+    }
+
+    @include mobile {
+        padding-bottom: 40px;
+    }
+
     &__title {
         margin-bottom: 48px;
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__content {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__field {
         width: 48.3%;
         &--big {
             width: 100%;
             margin-top: 23px;
+
+            @include mobile {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        @include mobile {
+            margin-bottom: 20px;
+            width: 100%;
         }
     }
     .form-field {
@@ -33,6 +60,9 @@
             &--big {
                 height: 100px;
                 margin-bottom: 47px;
+                @include mobile {
+                    margin-bottom: 0;
+                }
             }
         }
     }

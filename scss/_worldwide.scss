@@ -4,4 +4,8 @@
     &__title {
         margin-bottom: 58px;
     }
+
+    @include minidesk {
+        display: none;
+    }
 }

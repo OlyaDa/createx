@@ -4,6 +4,15 @@
     padding-top: 118px;
     padding-bottom: 180px;
     background-color: var(--color-white);
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
     &__decorate-1 {
         position: absolute;
         right: 3px;
@@ -24,6 +33,14 @@
         align-items: center;
         &:not(:last-child) {
             margin-bottom: 118px;
+
+            @include minitablet {
+                margin-bottom: 60px;
+            }
+
+            @include mobile {
+                margin-bottom: 40px;
+            }
         }
         &--reverse {
             .services__info {
@@ -35,13 +52,30 @@
                 justify-content: flex-end;
             }
         }
+
+        @include minitablet {
+            display: block;
+        }
     }
     &__image {
         grid-column: 6 span;
+
+        @include minitablet {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        @include mobile {
+            margin-bottom: 15px;
+        }
     }
     &__info {
         grid-column: 6 span;
         padding-left: 26px;
+
+        @include minitablet {
+            padding-left: 0;
+        }
     }
     &__title {
         margin: 0;
@@ -51,6 +85,11 @@
         max-width: 575px;
         color: var(--color-dark);
         margin-bottom: 25px;
+
+        @include mobile {
+            font-size: 28px;
+            line-height: 40px;
+        }
     }
     &__descr {
         margin: 0;
@@ -59,6 +98,10 @@
         color: var(--color-storm);
         margin-bottom: 49px;
         max-width: 574px;
+
+        @include minitablet {
+            margin-bottom: 25px;
+        }
     }
     &__link {
         padding: 11px 31px;

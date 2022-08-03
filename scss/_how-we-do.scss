@@ -1,7 +1,24 @@
 .how-we-do {
     padding: 50px 0 120px 0;
+
+    @include minitablet {
+        padding: 50px 0 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
     &__title {
         margin-bottom: 60px;
+
+        @include minitablet {
+            margin-bottom: 40px;
+        }
+    
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__list {
         counter-reset: section;
@@ -33,6 +50,10 @@
             line-height: 130%;
             color: #d7dadd;
             margin-bottom: 16px;
+        }
+
+        @include tablet {
+            grid-column: 6 span;
         }
     }
     &__subtitle {

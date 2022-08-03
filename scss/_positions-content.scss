@@ -1,12 +1,33 @@
 .positions-content {
     padding: 121px 0 90px 0;
+
+    @include minitablet {
+        padding: 60px 0 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0 40px 0;
+    }
+
     &__left {
         grid-column: 7 span;
+
+        @include tablet {
+            grid-column: 8 span;
+        }
     }
     &__right {
         display: flex;
         justify-content: flex-end;
         grid-column: 5 span;
+
+        @include tablet {
+            grid-column: 4 span;
+        }
+
+        @include mobile {
+            grid-column: 8 span;
+        }
     }
 }
 .positions-item {
@@ -17,6 +38,22 @@
     border: 1px solid #e5e8ed;
     border-radius: 4px;
     padding: 32px 40px;
+
+    @include tablet {
+        padding: 32px 20px;
+    }
+
+    @include mobile {
+        padding: 20px 5px;
+        display: block;
+    }
+
+    &__left {
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+
     &__title {
         margin: 0;
         font-size: 20px;
@@ -59,6 +96,11 @@
         padding: 11px 30px;
         font-size: 14px;
         color: var(--color-primary);
+
+        @include tablet {
+            min-width: 120px;
+            padding: 11px 15px;
+        }
     }
 }
 
@@ -86,12 +128,42 @@
         font-size: 18px;
         line-height: 150%;
         color: var(--color-gray);
+
+        @include minitablet {
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__btn--subs {
         padding: 15px 44px;
         margin-right: 26px;
+
+        @include tablet {
+            margin-right: 0;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        @include mobile {
+            width: 250px;
+        }
     }
+
     &__btn--send {
         padding: 15px 52px;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 250px;
+        }
+    }
+
+    @include mobile {
+        width: 100%;
     }
 }

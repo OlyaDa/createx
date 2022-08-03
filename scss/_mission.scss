@@ -3,6 +3,14 @@
     &--about {
         background-color: var(--color-athens);
         padding: 81px 0 90px 0;
+
+        @include minitablet {
+            padding: 60px 0 60px 0;
+        }
+
+        @include mobile {
+            padding: 40px 0 20px 0;
+        }
     }
 
     &__list {
@@ -11,6 +19,18 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 27px;
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+
+        @include minitablet {
+            --mission-gap: 10px;
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
     &__item {
         position: relative;
@@ -33,6 +53,11 @@
                 background-repeat: no-repeat;
             }
         }
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
+
         &--quality {
             background-image: url(../images/like.svg);
         }
@@ -68,6 +93,12 @@
     box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
         0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
     border-radius: 4px;
+
+    @include mobile {
+        top: 0;
+        padding: 20px 0;
+    }
+
     &__title {
         margin: 0;
         text-align: center;
@@ -80,12 +111,39 @@
     &__content {
         display: flex;
         align-items: flex-end;
+
+        @include tablet {
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            & > * {
+                margin-right: 0 !important;
+                margin-bottom: 20px !important;
+                width: 49%;
+                flex-grow: initial !important;
+
+                .form-field__input {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
     &__field {
         margin-right: 24px;
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
+
+        @include mobile {
+            width: 100%;
+        }
     }
     &__btn {
         padding: 11px 29px;
+        @include mobile {
+            width: 100%;
+        }
     }
 }

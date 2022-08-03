@@ -1,12 +1,39 @@
 .comments {
     padding-top: 81px;
     padding-bottom: 80px;
+
+    @include minitablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &__title {
         margin-bottom: 60px;
+
+        @include minitablet {
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            margin-bottom: 25px;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-bottom: 59px;
+
+            @include minitablet {
+                margin-bottom: 40px;
+            }
+
+            @include mobile {
+                margin-bottom: 25px;
+            }
         }
     }
 }

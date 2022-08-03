@@ -1,24 +1,60 @@
 .portfolio-section {
     padding: 120px 0;
     background-color: var(--color-white);
+
+    @include minitablet {
+        padding: 60px 0;
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
     &__top {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__title {
         margin: 0;
         max-width: 710px;
         padding-bottom: 12px;
+
+        @include tablet {
+            font-size: 40px;
+        }
+
+        @include mobile {
+            max-width: none;
+            font-size: 28px;
+            line-height: 40px;
+            margin-bottom: 25px;
+        }
     }
     &__slider-nav {
         transform: translateX(12px);
+
+        @include mobile {
+            transform: none;
+        }
     }
     &__top {
         margin-bottom: 49px;
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
     }
     &__items {
         padding-bottom: 80px;
+
+        @include mobile {
+            padding-bottom: 25px;
+        }
     }
 }
 .slider-nav {
@@ -69,6 +105,11 @@
         0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
     background: #ffffff;
     margin: 4px;
+
+    @include minitablet {
+        padding-bottom: 159px;
+    }
+
     &:focus {
         outline: 2px solid var(--color-primary);
         outline-offset: 2px;
@@ -88,7 +129,11 @@
         left: 0;
         right: 0;
         background-color: var(--color-white);
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
+
+        @include minitablet {
+            bottom: -4px;
+        }
     }
     &__title {
         margin: 0;

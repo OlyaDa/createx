@@ -1,12 +1,20 @@
 .about-section {
     padding-bottom: 60px;
     background-color: var(--color-white);
+    @include mobile {
+        padding-bottom: 40px;
+    }
 }
 .video-block {
     position: relative;
     overflow: hidden;
     border-radius: 4px;
     height: 500px;
+
+    @include mobile {
+        height: 300px;
+    }
+
     &::before {
         content: "";
         position: absolute;

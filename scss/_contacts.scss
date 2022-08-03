@@ -1,14 +1,43 @@
 .contacts {
     padding-top: 120px;
     padding-bottom: 120px;
+
+    @include minitablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
+        @include tablet {
+            display: block;
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
     &__image {
         flex-shrink: 0;
         margin-right: 20px;
+
+        @include minidesk {
+            max-width: 42%;
+        }
+
+        @include tablet {
+            max-width: 100%;
+            margin-bottom: 25px;
+            margin-right: 0;
+        }
     }
     .custom-checkbox__text {
         font-size: 16px;
@@ -52,9 +81,18 @@
     justify-content: space-between;
     align-items: flex-start;
     max-width: 600px;
+
+    @include tablet {
+        max-width: none;
+    }
+
     &__field {
         width: 47.6%;
         &--big {
+            width: 100%;
+        }
+
+        @include mobile {
             width: 100%;
         }
     }
@@ -63,20 +101,31 @@
         padding: 0;
         margin: 0;
         width: 47.6%;
+
+        @include mobile {
+            width: 100%;
+        }
     }
     &__bottom {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__checkbox {
         max-width: 315px;
     }
     &__btn {
         padding: 14px 41px;
+
+        @include mobile {
+            margin-top: 25px;
+        }
     }
 }
-
 
 .choices__list--dropdown .choices__item--selectable::after,
 .choices__list[aria-expanded] .choices__item--selectable::after {

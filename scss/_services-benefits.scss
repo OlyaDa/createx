@@ -1,12 +1,25 @@
 .services-benefits {
     padding-top: 80px;
     background-color: var(--color-dark);
+
+    @include minitablet {
+        padding-top: 60px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+    }
+
     &__title {
         color: var(--color-white);
     }
     &__btn {
         width: 390px;
         transform: translateY(13px);
+
+        @include mobile {
+            width: 260px;
+        }
     }
     &__centered {
         margin-bottom: -13px;
@@ -17,6 +30,20 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 86px;
         gap: calc(var(--mission-gap) * 2);
+
+        @include tablet {
+            --mission-gap: 30px;
+        }
+
+        @include minitablet {
+            --mission-gap: 10px;
+            margin-bottom: 60px;
+        }
+
+        @include mobile {
+            display: block;
+            margin-bottom: 40px;
+        }
     }
     &__item {
         position: relative;
@@ -25,6 +52,12 @@
         background-position: top center;
         background-repeat: no-repeat;
         background-size: 48px 48px;
+
+        @include mobile {
+            margin-bottom: 25px;
+            padding-top: 60px;
+        }
+
         &:not(:last-child) {
             &::after {
                 content: "";

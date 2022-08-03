@@ -1,3 +1,4 @@
+
 class GraphAccordion {
     constructor(selector, options) {
         let defaultOptions = {
@@ -15,9 +16,13 @@ class GraphAccordion {
     }
 
     start() {
+        console.log('start!');
         if (this.accordion) {
             if (this.accordion.classList.contains('is-open')) {
                 this.open()
+            }
+            else {
+                this.close();
             }
         }
     }
@@ -43,15 +48,19 @@ class GraphAccordion {
         this.accordion.classList.add('is-open');
         this.control.setAttribute('aria-expanded', true);
         this.content.setAttribute('aria-hidden', false);
+        // this.content.setAttribute('style', 'visibility: hidden;');
+        this.content.style.visibility = 'visible';
         this.content.style.maxHeight = this.content.scrollHeight + 'px';
         this.options.isOpen(this);
     }
 
     close() {
+        console.log('close');
         this.accordion.classList.remove('is-open');
         this.control.setAttribute('aria-expanded', false);
         this.content.setAttribute('aria-hidden', true);
-        this.content.style.maxHeight = null;
+        this.content.setAttribute('style', 'visibility: hidden;');
+        this.content.style.maxHeight = '0px';
         this.options.isClose(this);
     }
 }
@@ -62,7 +71,11 @@ if (document.querySelector('.we-offer')) {
     });
 
     const accordion2 = new GraphAccordion('.accordion-2', {
-        speed: 300
+        speed: 100300
     });
 }
+
+
+
+
 
