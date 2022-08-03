@@ -81,14 +81,17 @@
         &:focus {
             outline: 2px solid var(--color-primary);
             outline-offset: 2px;
+            border-radius: 100%;
         }
         &:hover {
             color: var(--color-white);
             background-color: var(--color-primary);
+            border-radius: 100%;
         }
         &:active {
             color: var(--color-white);
             background-color: var(--color-active);
+            border-radius: 100%;
         }
     }
 }
