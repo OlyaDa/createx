@@ -925,8 +925,8 @@ a {
     display: block;
     background-color: var(--color-white);
     z-index: 500;
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
@@ -944,6 +944,12 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    padding: 20px;
   }
 }
 
@@ -1006,6 +1012,7 @@ a {
 
 @media (max-width: 1024px) {
   .header-contacts--nav {
+    margin-left: 0;
     display: block;
   }
 }
@@ -3670,6 +3677,10 @@ a.article-meta__item:active {
   }
 }
 
+.we-offer__accordion {
+  --accordion-time: 0.5s;
+}
+
 .we-offer__accordion:not(:last-of-type) {
   margin-bottom: 15px;
 }
@@ -3684,6 +3695,7 @@ a.article-meta__item:active {
   position: relative;
   text-align: left;
   padding: 0 20px 0 45px;
+  cursor: pointer;
 }
 
 .we-offer__accordion .accordion__control:focus {
@@ -3698,8 +3710,23 @@ a.article-meta__item:active {
   color: var(--color-dark);
 }
 
+@media (max-width: 576px) {
+  .we-offer__accordion .accordion__title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
 .we-offer__accordion .accordion__content {
   padding: 11px 10px 11px 45px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .we-offer__accordion .accordion__content p {
@@ -3742,8 +3769,8 @@ a.article-meta__item:active {
   background-color: var(--color-primary);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity var(--accordion-time) ease-in-out;
+  transition: opacity var(--accordion-time) ease-in-out;
 }
 
 .we-offer .is-open .accordion__icon {
@@ -3753,6 +3780,10 @@ a.article-meta__item:active {
 
 .we-offer .is-open .accordion__icon::after {
   opacity: 0;
+}
+
+.we-offer .is-open .accordion__content {
+  opacity: 1;
 }
 
 .how-we-do {
